@@ -5,17 +5,22 @@ import styled from "styled-components"
 import Login from "./login/Login"
 import Cadastro from "./cadastro/Cadastro"
 import Home from "./home/Home"
+import Pedido from "./NovoPedido/NovoPedido"
+
 
 export default function App (){
 
 
     return(       
         <BrowserRouter>
+
             <Routes>
                 <Route path="/" element= {<Home/>}/>
                 <Route path="/login" element= {<Login/>}/>
                 <Route path="/cadastro" element= {<Cadastro/>}/>
+                <Route path="/pedido" element= {<Pedido/>}/>
             </Routes>
+
         </BrowserRouter>
     )
 }

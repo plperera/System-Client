@@ -2,8 +2,9 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import Menu from "../menu/Menu"
+import FormsPedido from "./FormsPedido"
 
-export default function Home (){
+export default function Pedido (){
     const [user, setUser] = useState(true)
     const navigate = useNavigate()
 
@@ -12,7 +13,9 @@ export default function Home (){
         (user)?(
             <Container>
                 <Menu/>
-                <ContainerHome>a</ContainerHome>
+                <ContainerPedido>
+                    <FormsPedido/>
+                </ContainerPedido>
             </Container>
 
         ):(
@@ -26,7 +29,7 @@ const Container = styled.div`
     display:flex;
 
 `
-const ContainerHome = styled.div`
+const ContainerPedido = styled.div`
     width:100%;
     height:100vh;
     background-color: #D9D9D9;
